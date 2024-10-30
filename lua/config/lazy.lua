@@ -19,4 +19,4 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   { import = 'plugins' },
   -- { import = 'plugins.lsp' },
-}, { install = { coloscheme = 'catppuccin' }, checker = { enabled = true, notify = false }, rocks = { enabled = false } })
+}, { install = { coloscheme = 'kanagawa' }, checker = { enabled = true, notify = false }, rocks = { enabled = false } })
