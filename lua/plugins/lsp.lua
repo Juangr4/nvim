@@ -99,6 +99,7 @@ return {
         -- yamlls = {},
 
         jdtls = {},
+        pyright = {},
 
         lua_ls = {
           settings = {
