@@ -98,7 +98,7 @@ return {
         jsonls = {},
         -- yamlls = {},
 
-        jdtls = {},
+        -- jdtls = {},
         pyright = {},
 
         lua_ls = {
