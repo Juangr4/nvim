@@ -66,6 +66,9 @@ map('n', '<C-l>', ':wincmd l<CR>', 'Navigate window to the right')
 
 -- Some utilities
 
+-- select all the file
+map('n', '<C-a>', 'ggVG', 'Select all the file content')
+
 -- delete single character without copying into register
 map('n', 'x', '"_x', 'Delete without copying to clipboard')
 
