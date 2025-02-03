@@ -92,11 +92,13 @@ return {
         html = { filetypes = { 'html', 'twig', 'hbs' } },
         cssls = {},
         tailwindcss = {},
-        -- dockerls = {},
+        eslint = {},
+        dockerls = {},
+        docker_compose_language_service = {},
         -- sqlls = {},
 
         jsonls = {},
-        -- yamlls = {},
+        yamlls = {},
 
         -- jdtls = {},
         pyright = {},
