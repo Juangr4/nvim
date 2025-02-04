@@ -1,6 +1,7 @@
 return {
   'nvim-telescope/telescope.nvim',
   event = 'VimEnter',
+  enabled = true,
   branch = '0.1.x',
   dependencies = {
     'nvim-lua/plenary.nvim',
@@ -110,13 +111,13 @@ return {
       }
     end, { desc = '[S]earch [/] in Open Files' })
 
-    vim.api.nvim_create_autocmd('VimEnter', {
-      callback = function()
-        if vim.fn.argv(0) == '' then
-          require('telescope.builtin').find_files()
-        end
-      end,
-    })
+    -- vim.api.nvim_create_autocmd('VimEnter', {
+    --   callback = function()
+    --     if vim.fn.argv(0) == '' then
+    --       require('telescope.builtin').find_files()
+    --     end
+    --   end,
+    -- })
 
     local is_git_dir = function()
       return os.execute 'git rev-parse --is-inside-work-tree >> /dev/null 2>&1'

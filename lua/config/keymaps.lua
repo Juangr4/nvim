@@ -12,10 +12,10 @@ end
 
 -- Common actions
 -- map('n', '<leader>fw', '<cmd>w<cr>', 'Save file')
--- map('n', '<C-s>', '<cmd>w<cr>', 'Save file')
--- map('n', '<leader>fs', '<cmd>noautocmd w<cr>', 'Save file without formatting')
+map('n', '<C-s>', '<cmd>w<cr>', 'Save file')
+map('n', '<leader>fs', '<cmd>noautocmd w<cr>', 'Save file without formatting')
 -- map('n', '<leader>qq', '<cmd>q<cr>', 'Quit')
--- map('n', '<C-q>', '<cmd>q<cr>', 'Quit')
+map('n', '<C-q>', '<cmd>q<cr>', 'Quit')
 -- map('n', '<leader>qa', '<cmd>qa!<cr>', 'Quit all')
 -- map('n', '<leader>dw', '<cmd>close<cr>', 'Close windows')
 
