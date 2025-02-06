@@ -10,12 +10,15 @@ return {
     },
     config = function()
       require('neo-tree').setup {
+        close_if_last_window = true,
         filesystem = {
           filtered_items = {
             visible = false,
             hide_dotfiles = true,
             hide_gitignored = false,
+            hide_hidden = true, -- for Windows hidden files/directories
           },
+          hijack_netrw_behavior = 'disabled',
         },
         window = {
           width = 30,

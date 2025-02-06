@@ -40,7 +40,7 @@ map('n', '<S-Tab>', ':bprevious<CR>', 'Go to previous buffer')
 map('n', '<S-h>', ':bprevious<CR>', 'Go to previous buffer')
 -- map('n', '<leader>bq', ':Bdelete!<CR>', 'Close buffer')
 -- map('n', '<leader>bx', ':Bdelete!<CR>', 'Close buffer')
--- map('n', '<leader>bn', '<cmd> enew <CR>', 'Create a new buffer')
+map('n', '<leader>bn', '<cmd> enew <CR>', 'Create a new buffer')
 -- map('n', '<leader>bd', ':bd<CR>', 'Close the actual buffer')
 
 -- Window management
@@ -56,13 +56,13 @@ map('n', '<C-h>', ':wincmd h<CR>', 'Navigate window to the left')
 map('n', '<C-l>', ':wincmd l<CR>', 'Navigate window to the right')
 
 -- Tabs
--- map('n', '<leader>to', ':tabnew<CR>', 'Open a new tab')
--- map('n', '<leader>tx', ':tabclose<CR>', 'Close current tab')
--- map('n', '<leader>tn', ':tabn<CR>', 'Go to next tab')
--- map('n', '<leader>tp', ':tabp<CR>', 'Go to previous tab')
+map('n', '<leader>to', ':tabnew<CR>', 'Open a new tab')
+map('n', '<leader>tx', ':tabclose<CR>', 'Close current tab')
+map('n', '<leader>tn', ':tabn<CR>', 'Go to next tab')
+map('n', '<leader>tp', ':tabp<CR>', 'Go to previous tab')
 
 -- Toggle line wrapping
--- map('n', '<leader>lw', '<cmd>set wrap!<CR>', 'Toggle line wrap')
+map('n', '<leader>lw', '<cmd>set wrap!<CR>', 'Toggle line wrap')
 
 -- Some utilities
 
@@ -82,8 +82,8 @@ map('v', '>', '>gv', 'Indent')
 -- Diagnostic keymaps
 map('n', '[d', vim.diagnostic.goto_prev, 'Go to previous diagnostic message')
 map('n', ']d', vim.diagnostic.goto_next, 'Go to next diagnostic message')
-map('n', '<leader>dd', vim.diagnostic.open_float, 'Open floating diagnostic message')
-map('n', '<leader>dl', vim.diagnostic.setloclist, 'Open diagnostics list')
+-- map('n', '<leader>dd', vim.diagnostic.open_float, 'Open floating diagnostic message')
+-- map('n', '<leader>dl', vim.diagnostic.setloclist, 'Open diagnostics list')
 
 -- Lazy
 map('n', '<leader>ll', ':Lazy<CR>', 'Open Lazy menu')
