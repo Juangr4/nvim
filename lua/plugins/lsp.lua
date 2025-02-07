@@ -8,7 +8,7 @@ return {
       { 'j-hui/fidget.nvim', opts = {} },
       -- 'hrsh7th/cmp-nvim-lsp',
       -- 'hrsh7th/cmp-cmdline',
-      { 'nvim-java/nvim-java' },
+      -- { 'nvim-java/nvim-java' },
       -- { 'pmizio/typescript-tools.nvim', dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' }, opts = {} },
       { 'saghen/blink.cmp' },
     },

@@ -33,6 +33,14 @@ return {
     --     },
     --   },
     -- },
+    {
+      'fang2hou/blink-copilot',
+      opts = {
+        max_completions = 1, -- Global default for max completions
+        max_attempts = 2, -- Global default for max attempts
+        -- `kind` is not set, so the default value is "Copilot"
+      },
+    },
   },
 
   ---@module 'blink.cmp'
@@ -64,7 +72,20 @@ return {
     -- Default list of enabled providers defined so that you can extend it
     -- elsewhere in your config, without redefining it, due to `opts_extend`
     sources = {
-      default = { 'lsp', 'path', 'snippets', 'buffer' },
+      default = { 'lsp', 'path', 'copilot', 'snippets', 'buffer' },
+      providers = {
+        copilot = {
+          name = 'copilot',
+          module = 'blink-copilot',
+          score_offset = 100,
+          async = true,
+          opts = {
+            -- Local options override global ones
+            -- Final settings: max_completions = 3, max_attempts = 2, kind = "Copilot"
+            max_completions = 3, -- Override global max_completions
+          },
+        },
+      },
     },
   },
   opts_extend = { 'sources.default' },

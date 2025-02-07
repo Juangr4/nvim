@@ -73,18 +73,18 @@ return {
         { section = 'header' },
         { section = 'keys', gap = 1, padding = 1 },
         { section = 'startup' },
-        {
-          section = 'terminal',
-          cmd = 'pokemon-colorscripts -r --no-title; sleep .1',
-          random = 10,
-          pane = 2,
-          padding = 1,
-          indent = 4,
-          enabled = function()
-            return vim.loop.os_uname().sysname == 'Linux'
-          end,
-          height = 30,
-        },
+        -- {
+        --   section = 'terminal',
+        --   cmd = 'pokemon-colorscripts -r --no-title; sleep .1',
+        --   random = 10,
+        --   pane = 2,
+        --   padding = 1,
+        --   indent = 4,
+        --   enabled = function()
+        --     return vim.loop.os_uname().sysname == 'Linux'
+        --   end,
+        --   height = 30,
+        -- },
       },
     },
     notifier = {
@@ -305,6 +305,7 @@ return {
     { '<leader>sn', function() Snacks.picker.notifications() end, desc = 'Notification History', },
     { '<leader>si', function() Snacks.picker.icons() end, desc = 'Icons', },
     { '<leader>sd', function() Snacks.picker.diagnostics_buffer() end, desc = 'Buffer Diagnostics', },
+    { '<leader>sc', function() Snacks.picker.files { cwd = vim.fn.stdpath('config') } end, desc = 'Find Config File', },
     -- { '<leader>sd', function() Snacks.picker.diagnostics() end, desc = 'Diagnostics', },
     -- { '<leader>sc', function() Snacks.picker.files { cwd = vim.fn.stdpath 'config' } end, desc = 'Find Config File', },
     -- Utils
