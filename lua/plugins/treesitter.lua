@@ -22,6 +22,8 @@ return {
           'yaml',
           'dockerfile',
           'regex',
+          'latex',
+          'markdown',
         },
         sync_install = false,
         highlight = { enable = true },

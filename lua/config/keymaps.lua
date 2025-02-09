@@ -42,6 +42,8 @@ map('n', '<S-h>', ':bprevious<CR>', 'Go to previous buffer')
 -- map('n', '<leader>bx', ':Bdelete!<CR>', 'Close buffer')
 map('n', '<leader>bn', '<cmd> enew <CR>', 'Create a new buffer')
 -- map('n', '<leader>bd', ':bd<CR>', 'Close the actual buffer')
+map('n', '<leader>bq', ':%bd<CR>', 'Close all buffers')
+map('n', '<leader>ba', ':%bd|e#<CR>', 'Close all buffers except the current one')
 
 -- Window management
 map('n', '<leader>wv', '<C-w>v', 'Split window vertically')

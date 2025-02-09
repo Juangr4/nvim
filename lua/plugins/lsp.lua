@@ -97,6 +97,7 @@ return {
         eslint = {},
         dockerls = {},
         docker_compose_language_service = {},
+        ansiblels = {},
         -- sqlls = {},
 
         jsonls = {},
