@@ -1,11 +1,13 @@
 return {
   {
     'OXY2DEV/markview.nvim',
-    lazy = false,
+    lazy = true,
+    ft = 'markdown',
   },
   {
     'lervag/vimtex',
-    lazy = false,
+    lazy = true,
+    ft = 'tex',
     -- tag = "v2.15",
     init = function()
       vim.g.vimtex_view_method = 'zathura'
