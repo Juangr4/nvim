@@ -301,6 +301,36 @@ return {
       modes = { 'n', 'i', 'c' }, -- modes to show references
     },
     picker = {},
+    images = {
+      formats = { "png", "jpg", "jpeg", "gif", "bmp", "webp", "tiff", "heic", "avif", "mp4", "mov", "avi", "mkv", "webm" },
+      force = false, -- try displaying the image, even if the terminal does not support it
+      doc = {
+        enabled = true,
+        inline = true,
+        float = true,
+        max_width = 80,
+        max_height = 40,
+      },
+      img_dirs = { "img", "images", "assets", "static", "public", "media", "attachments" },
+      wo = {
+        wrap = false,
+        number = false,
+        relativenumber = false,
+        cursorcolumn = false,
+        signcolumn = "no",
+        foldcolumn = "0",
+        list = false,
+        spell = false,
+        statuscolumn = "",
+      },
+      cache = vim.fn.stdpath("cache") .. "/snacks/image",
+      debug = {
+        request = false,
+        convert = false,
+        placement = false,
+      },
+      env = {},
+    },
   },
   keys = {
     -- Snacks Picker
