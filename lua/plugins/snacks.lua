@@ -334,8 +334,8 @@ return {
   },
   keys = {
     -- Snacks Picker
-    { '<leader><space>', function () Snacks.picker.smart() end, desc = 'Smart Find files'},
-    -- { '<leader><space>', function() Snacks.picker.buffers() end, desc = 'Buffers', },
+    -- { '<leader><space>', function () Snacks.picker.smart() end, desc = 'Smart Find files'},
+    { '<leader><space>', function() Snacks.picker.buffers() end, desc = 'Buffers', },
     { '<leader>sb', function() Snacks.picker.lines() end, desc = 'Buffer Lines', },
     { '<leader>sf', function() Snacks.picker.files() end, desc = 'Find Files', },
     { '<leader>sg', function() Snacks.picker.grep() end, desc = 'Grep', },

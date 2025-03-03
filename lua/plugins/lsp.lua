@@ -94,7 +94,14 @@ return {
         html = { filetypes = { 'html', 'twig', 'hbs' } },
         cssls = {},
         tailwindcss = {},
-        eslint = {},
+        eslint = {
+          on_attach = function(client, bufnr)
+            vim.api.nvim_create_autocmd('BufWritePost', {
+              buffer = bufnr,
+              command = 'EslintFixAll',
+            })
+          end,
+        },
         dockerls = {},
         docker_compose_language_service = {},
         ansiblels = {},

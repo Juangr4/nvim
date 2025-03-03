@@ -17,6 +17,17 @@ return {
             hide_dotfiles = true,
             hide_gitignored = false,
             hide_hidden = true, -- for Windows hidden files/directories
+            hide_by_name = {
+              'node_modules',
+            },
+            always_show = {
+              '.gitignore',
+              '.dockerignore',
+            },
+            never_show = {
+              '.DS_Store',
+              'thumbs.db',
+            },
           },
           hijack_netrw_behavior = 'disabled',
         },
