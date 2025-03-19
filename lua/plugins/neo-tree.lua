@@ -20,6 +20,9 @@ return {
             hide_by_name = {
               'node_modules',
             },
+            hide_by_pattern = {
+              '*tfstate*',
+            },
             always_show = {
               '.gitignore',
               '.dockerignore',

@@ -112,6 +112,7 @@ return {
 
         -- jdtls = {},
         pyright = {},
+        rust_analyzer = {},
 
         lua_ls = {
           settings = {
