@@ -19,3 +19,7 @@ vim.api.nvim_create_autocmd('VimEnter', {
 --     end
 --   end,
 -- })
+
+vim.api.nvim_create_user_command('UpdateConfigFromRepo', function()
+  vim.fn.system { 'git', '-C', vim.fn.stdpath 'config', 'pull' }
+end, {})
