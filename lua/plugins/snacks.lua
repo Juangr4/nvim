@@ -331,6 +331,49 @@ return {
       },
       env = {},
     },
+    terminal = {
+      bo = {
+        filetype = "snacks_terminal",
+      },
+      wo = {},
+      win = {
+        position = "float",
+        width = math.floor(vim.o.columns * 0.7),
+        height = math.floor(vim.o.lines * 0.7),
+        border = "rounded",
+      },
+      keys = {
+        q = "hide",
+        gf = function(self)
+          local f = vim.fn.findfile(vim.fn.expand("<cfile>"), "**")
+          if f == "" then
+            Snacks.notify.warn("No file under cursor")
+          else
+            self:hide()
+            vim.schedule(function()
+              vim.cmd("e " .. f)
+            end)
+          end
+        end,
+        term_normal = {
+          "<esc>",
+          function(self)
+            self.esc_timer = self.esc_timer or (vim.uv or vim.loop).new_timer()
+            if self.esc_timer:is_active() then
+              self.esc_timer:stop()
+              vim.cmd("stopinsert")
+            else
+              self.esc_timer:start(200, 0, function() end)
+              return "<esc>"
+            end
+          end,
+          mode = "t",
+          expr = true,
+          desc = "Double escape to normal mode",
+        },
+        ["<c-ç>"] = "close_terminal",
+      },
+    },
   },
   keys = {
     -- Snacks Picker
@@ -374,8 +417,8 @@ return {
     { '<leader>lS', function() Snacks.scratch.select() end, desc = 'Select Scratch Buffer', },
     { '<leader>bd', function() Snacks.bufdelete() end, desc = 'Delete Buffer', },
     { '<leader>fr', function() Snacks.rename.rename_file() end, desc = 'Rename File', },
-    { '<c-/>', function() Snacks.terminal() end, desc = 'Toggle Terminal', },
-    { '<c-_>', function() Snacks.terminal() end, desc = 'which_key_ignore', },
+    { '<c-ç>', function() Snacks.terminal() end, desc = 'Toggle Terminal', },
+    -- { '<c-_>', function() Snacks.terminal() end, desc = 'which_key_ignore', },
     { ']]', function() Snacks.words.jump(vim.v.count1) end, desc = 'Next Reference', mode = { 'n', 't' }, },
     { '[[', function() Snacks.words.jump(-vim.v.count1) end, desc = 'Prev Reference', mode = { 'n', 't' }, },
     {
