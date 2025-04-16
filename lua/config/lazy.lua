@@ -15,8 +15,21 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Setup lazy.nvim
-require('lazy').setup({
+local specs = {
   { import = 'plugins' },
-  -- { import = 'plugins.lsp' },
-}, { install = { coloscheme = 'kanagawa' }, checker = { enabled = true, notify = false }, rocks = { enabled = false } })
+}
+
+-- Setup lazy.nvim
+require('lazy').setup {
+  spec = specs,
+  install = {
+    coloscheme = 'kanagawa',
+  },
+  checker = {
+    enabled = true,
+    notify = false,
+  },
+  rocks = {
+    enabled = false,
+  },
+}
