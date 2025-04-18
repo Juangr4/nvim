@@ -168,6 +168,13 @@ return {
       desc = 'Search in Files',
     },
     {
+      '<leader>?',
+      function()
+        Snacks.picker.keymaps()
+      end,
+      desc = 'Keymaps',
+    },
+    {
       '<leader>s,',
       function()
         Snacks.picker.buffers()

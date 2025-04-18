@@ -209,7 +209,13 @@ return {
   {
     'OXY2DEV/markview.nvim',
     lazy = true,
-    ft = 'markdown',
+    ft = { 'markdown', 'codecompanion', 'Avante' },
+    opts = {
+      preview = {
+        filetypes = { 'markdown', 'codecompanion', 'Avante' },
+        ignore_buftypes = {},
+      },
+    },
   },
   {
     'elkowar/yuck.vim',
@@ -231,6 +237,7 @@ return {
         { '<leader>l', group = 'Uti[l]s', icon = '' },
         { '<leader>c', group = '[C]ode', icon = '' },
         { '<leader>q', group = '[Q]uit', icon = '󰩈' },
+        { '<leader>a', group = '[A]vante', icon = ' ' },
         -- Create some for better UI
         { '<leader>z', group = 'Open Lazy Menu', icon = '󰒲' },
         { '<leader>e', icon = '󰙅' },

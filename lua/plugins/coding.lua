@@ -8,15 +8,19 @@ return {
         ['TelescopePrompt'] = false,
         ['copilot-chat'] = false,
         ['snack_terminal'] = false,
+        ['AvanteInput'] = false,
+        ['codecompanion'] = false,
       }
       vim.g.copilot_assume_mapped = true
     end,
   },
   -- Autocomplete
+  { 'saghen/blink.compat', version = '*', lazy = true, opts = {} },
   {
     'saghen/blink.cmp',
     version = '*',
     dependencies = {
+      'Kaiser-Yang/blink-cmp-avante',
       {
         'L3MON4D3/LuaSnip',
         version = 'v2.*',
@@ -61,7 +65,7 @@ return {
       signature = { enabled = false },
       snippets = { preset = 'luasnip' },
       sources = {
-        default = { 'copilot', 'lsp', 'path', 'snippets', 'buffer' },
+        default = { 'avante', 'copilot', 'lsp', 'path', 'snippets', 'buffer' },
         providers = {
           copilot = {
             name = 'copilot',
@@ -70,6 +74,7 @@ return {
             async = true,
             opts = { max_completions = 3 },
           },
+          avante = { module = 'blink-cmp-avante', name = 'Avante', opts = {} },
         },
       },
       cmdline = { enabled = true },
@@ -114,11 +119,39 @@ return {
     event = 'VeryLazy',
     opts = {},
     keys = {
-      { 'm', mode = { 'n', 'x', 'o' }, function() require('flash').jump() end, desc = 'Flash' },
-      { 'T', mode = { 'n', 'x', 'o' }, function() require('flash').treesitter() end, desc = 'Flash Treesitter' },
+      {
+        'm',
+        mode = { 'n', 'x', 'o' },
+        function()
+          require('flash').jump()
+        end,
+        desc = 'Flash',
+      },
+      {
+        'T',
+        mode = { 'n', 'x', 'o' },
+        function()
+          require('flash').treesitter()
+        end,
+        desc = 'Flash Treesitter',
+      },
       -- { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
-      { 'R', mode = { 'o', 'x' }, function() require('flash').treesitter_search() end, desc = 'Treesitter Search' },
-      { '<c-s>', mode = { 'c' }, function() require('flash').toggle() end, desc = 'Toggle Flash Search' },
+      {
+        'R',
+        mode = { 'o', 'x' },
+        function()
+          require('flash').treesitter_search()
+        end,
+        desc = 'Treesitter Search',
+      },
+      {
+        '<c-s>',
+        mode = { 'c' },
+        function()
+          require('flash').toggle()
+        end,
+        desc = 'Toggle Flash Search',
+      },
     },
   },
 }
