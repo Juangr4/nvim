@@ -9,4 +9,15 @@ return {
       vim.cmd.colorscheme = 'catppuccin'
     end,
   },
+  {
+    'folke/tokyonight.nvim',
+    lazy = false,
+    opts = {},
+  },
+  'rebelot/kanagawa.nvim',
+  'ellisonleao/gruvbox.nvim',
+  'nyoom-engineering/oxocarbon.nvim',
+  'navarasu/onedark.nvim',
+  'sainnhe/everforest',
+  'Mofiqul/vscode.nvim',
 }

@@ -243,6 +243,7 @@ return {
         { '<leader>e', icon = '󰙅' },
         { '<leader><space>', icon = '󰱼' },
         { '<leader>/', icon = '󰱼' },
+        { '<leader>?', icon = '󰋖' },
       },
       icons = {
         group = '',
