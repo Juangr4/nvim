@@ -209,7 +209,7 @@ return {
   {
     'OXY2DEV/markview.nvim',
     lazy = true,
-    ft = { 'markdown', 'codecompanion', 'Avante' },
+    ft = { 'markdown', 'codecompanion', 'Avante', 'copilot-chat' },
     opts = {
       preview = {
         filetypes = { 'markdown', 'codecompanion', 'Avante' },
@@ -240,6 +240,8 @@ return {
         { '<leader>a', group = '[A]vante', icon = ' ' },
         -- Create some for better UI
         { '<leader>z', group = 'Open Lazy Menu', icon = '󰒲' },
+        { '<leader>cc', group = '[C]ode [C]ompanion', icon = ' ' },
+        { '<leader>gc', group = '[G]ithub [C]opilot Chat', icon = ' ' },
         { '<leader>e', icon = '󰙅' },
         { '<leader><space>', icon = '󰱼' },
         { '<leader>/', icon = '󰱼' },

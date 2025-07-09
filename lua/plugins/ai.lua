@@ -1,5 +1,20 @@
 return {
   {
+    'CopilotC-Nvim/CopilotChat.nvim',
+    dependencies = {
+      { 'github/copilot.vim' },
+      { 'nvim-lua/plenary.nvim', branch = 'master' },
+    },
+    opts = {},
+    keys = {
+      { '<leader>gcm', '<cmd>CopilotChatModels<CR>', desc = '[C]opilotChat [M]odels' },
+      { '<leader>gca', '<cmd>CopilotChatAgents<CR>', desc = '[C]opilotChat [A]gents' },
+      { '<leader>gcc', '<cmd>CopilotChatOpen<CR>', desc = '[C]opilotChat [C]hat' },
+      { '<leader>gcC', '<cmd>CopilotChatCommit<CR>', desc = '[C]opilotChat [C]ommit' },
+      { '<leader>gcp', '<cmd>CopilotChatPrompts<CR>', mode = { 'n', 'v' }, desc = '[C]opilotChat [P]rompts' },
+    },
+  },
+  {
     'olimorris/codecompanion.nvim',
     dependencies = {
       'nvim-lua/plenary.nvim',
